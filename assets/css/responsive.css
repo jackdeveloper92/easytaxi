@@ -1,6 +1,13 @@
 @media (max-width: 1200px) {
 
+    .easytaxi-booking-form {
+        padding: 20px;
+        margin: 0 15px;
+    }
 
+    .easytaxi-booking-form .row>div {
+        margin-bottom: 10px;
+    }
 
     .quote-row {
         grid-template-columns: 1fr 1fr !important;
@@ -32,6 +39,8 @@
         padding: 2rem 1.5rem;
     }
 
+
+
     @keyframes scrollTestimonials {
         0% {
             transform: translateX(0);
@@ -44,6 +53,26 @@
 }
 
 @media (max-width: 768px) {
+
+    .easytaxi-booking-form {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .easytaxi-booking-form .form-control,
+    .easytaxi-booking-form .form-select,
+    .easytaxi-booking-form .btn-custom {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .add-multiple-stops {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 5px;
+        display: inline-block;
+    }
 
     .chos-cont h3 {
         font-size: 28px !important;
@@ -58,6 +87,10 @@
         font-size: 2rem;
     }
 
+    .sec-hed {
+        font-size: 30px;
+
+    }
 
 
 
@@ -74,6 +107,27 @@
 
     .quote-box-container {
         margin-top: -50px;
+    }
+
+    .quotes-section {
+        padding: 30px 0;
+    }
+
+    .quotes-list {
+        padding-left: 0;
+    }
+
+    .quote-card .row>div {
+        margin-bottom: 0;
+    }
+
+    .quote-card .price {
+        text-align: left;
+    }
+
+    .filter-card {
+        position: static;
+        margin-bottom: 2rem;
     }
 }
 
@@ -125,6 +179,11 @@
 
     li.nav-item {
         text-align: center;
+    }
+
+    .sec-hed {
+        font-size: 40px;
+
     }
 
 
@@ -233,6 +292,19 @@
 
     .benefit-card p {
         font-size: 0.9rem;
+    }
+
+    .quote-card .col-md-3.border-start {
+        border-left: none !important;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .easytaxi-booking-form {
+        padding: 10px;
+    }
+
+    .easytaxi-booking-form .row>div {
+        margin-bottom: 8px;
     }
 
 

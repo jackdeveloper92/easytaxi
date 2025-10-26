@@ -261,7 +261,7 @@
                 </div>
 
                 <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fa-solid fa-user fa-2xl mb-4" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-users fa-2xl mb-4" style="color: #FFD43B;"></i>
                     <h4>Customer Satisfaction</h4>
                     <p>Our partners maintain a 96% customer satisfaction rating.</p>
                 </div>
@@ -326,7 +326,7 @@
             <div class="row">
                 <div class="col-12 col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-12">
                     <div class="contact-all" data-aos="fade-right" data-aos-duration="1500">
-                        <h3 class="sec-hed m-0">Contact Us</h3>
+                        <h2 class="sec-hed m-0">Contact Us</h2>
                         <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Ut enim ad</p>
                         <form action="">

@@ -5,7 +5,7 @@
     <div class="container">
         <a class="navbar-brand" href="index.php">
             <!-- <img src="assets/images/logo.png" alt="EasyTaxi" class="img-fluid"> -->
-             <h2>LOGO</h2>
+             <h2>LOGO HERE</h2>
         </a>
         <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -109,5 +109,83 @@
   </div>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Toastr Configuration
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": true,
+        "progressBar": true,
+        "positionClass": "toast-bottom-right",
+        "preventDuplicates": true,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
 
+    // Common message function
+    function showUnderDevelopmentMessage() {
+        toastr.warning('This website is currently in its final stage of implementation. Development work is in progress. Thank you for your patience!');
+    }
+
+    // Login Form Submission
+    document.querySelector('#loginModal form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        showUnderDevelopmentMessage();
+        
+        // Close modal after 2 seconds
+        setTimeout(() => {
+            const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+            modal.hide();
+            this.reset();
+        }, 2000);
+    });
+
+    // Signup Form Submission
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        showUnderDevelopmentMessage();
+        
+        // Close modal after 2 seconds
+        setTimeout(() => {
+            const modal = bootstrap.Modal.getInstance(document.getElementById('signupModal'));
+            modal.hide();
+            this.reset();
+            document.getElementById('passwordError').classList.add('d-none');
+        }, 2000);
+    });
+
+    // Real-time password match validation for signup form
+    document.getElementById('confirmPassword').addEventListener('input', function() {
+        const password = document.getElementById('password').value;
+        const confirmPassword = this.value;
+        const errorElement = document.getElementById('passwordError');
+        
+        if (confirmPassword && password !== confirmPassword) {
+            errorElement.classList.remove('d-none');
+        } else {
+            errorElement.classList.add('d-none');
+        }
+    });
+
+    // Real-time password validation
+    document.getElementById('password').addEventListener('input', function() {
+        const confirmPassword = document.getElementById('confirmPassword').value;
+        const errorElement = document.getElementById('passwordError');
+        
+        if (confirmPassword && this.value !== confirmPassword) {
+            errorElement.classList.remove('d-none');
+        } else {
+            errorElement.classList.add('d-none');
+        }
+    });
+});
+</script>
 

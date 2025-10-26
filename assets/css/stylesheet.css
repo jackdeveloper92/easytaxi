@@ -9,6 +9,7 @@
   --secondary: #480404;
   --dark: #0D1B2A;
   --light: #f8f9fa;
+  --success: #115435c9;
   --text-dark: #333;
   --text-light: #666;
   --white: #fff;
@@ -130,66 +131,6 @@ h5 {
 }
 
 
-/* Remove old grid styles */
-.quote-row {
-  /* Remove grid properties */
-}
-
-.quote-row.oneway,
-.quote-row.return,
-.quote-row.hourly {
-  /* Remove grid template columns */
-}
-
-/* Remove old input styles */
-.quote-row input,
-.quote-row select {
-  /* Remove old styles - now using Bootstrap */
-}
-
-/* Responsive Design for Booking Form */
-@media (max-width: 1200px) {
-  .easytaxi-booking-form {
-    padding: 20px;
-    margin: 0 15px;
-  }
-
-  .easytaxi-booking-form .row>div {
-    margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .easytaxi-booking-form {
-    padding: 15px;
-    border-radius: 10px;
-  }
-
-  .easytaxi-booking-form .form-control,
-  .easytaxi-booking-form .form-select,
-  .easytaxi-booking-form .btn-custom {
-    height: 45px;
-    font-size: 14px;
-  }
-
-  .add-multiple-stops {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    margin-top: 5px;
-    display: inline-block;
-  }
-}
-
-@media (max-width: 576px) {
-  .easytaxi-booking-form {
-    padding: 10px;
-  }
-
-  .easytaxi-booking-form .row>div {
-    margin-bottom: 8px;
-  }
-}
 
 
 /* =======================================================
@@ -258,8 +199,6 @@ h5 {
   transition: grid-template-columns 0.4s ease;
 }
 
-
-
 .quote-row input,
 .quote-row select {
 
@@ -267,7 +206,6 @@ h5 {
   padding: 0.75rem 1rem;
   width: 100%;
   transition: all 0.3s ease;
-
 
 }
 
@@ -282,7 +220,6 @@ h5 {
 .stop-wrapper {
   position: relative;
 }
-
 
 
 .add-multiple-stops:hover {
@@ -403,11 +340,9 @@ h5 {
   margin: 0 auto 1rem;
 }
 
-/* Choose Section CSS from your provided code */
 .choose-sec {
   margin-top: -60px;
 }
-
 
 
 .chos-cont {
@@ -449,9 +384,6 @@ h5 {
 .pd-b {
   padding-bottom: 90px;
 }
-
-
-
 
 
 /* Quotes Page */
@@ -722,9 +654,6 @@ h5 {
 }
 
 
-
-
-
 @keyframes scrollTestimonials {
   0% {
     transform: translateX(0);
@@ -735,11 +664,6 @@ h5 {
   }
 }
 
-/* =======================================================
-   RESPONSIVE DESIGN FOR BENEFITS & TESTIMONIALS
-======================================================= */
-
-/* Large devices (1200px and below) */
 
 /* =======================================================
    TESTIMONIALS SECTION - SAME AS BENEFITS
@@ -821,13 +745,11 @@ h5 {
 }
 
 
-
-
 /* ============================================== */
 /* =============Quotes Page============== */
 .quotes-hero {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-  min-height: 50vh;
+  min-height: 500px;
   color: #fff;
   display: flex;
   align-items: center;
@@ -1015,7 +937,6 @@ h5 {
   color: white;
 }
 
-
 .company-logo {
   width: 100%;
   height: 100%;
@@ -1028,9 +949,7 @@ h5 {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* or use 'cover' if you want it to fill the box completely */
 
-  /* optional - matches your rounded corners */
 }
 
 .contact-all {
@@ -1065,6 +984,16 @@ input.form-control.mb-3::placeholder {
   border-radius: 2px;
   padding: 2px 5px;
 
+}
+
+.alert-custom-info {
+  background: var(--primary);
+  color: var(--dark);
+}
+
+.view-details-modal-header {
+  background: var(--primary-dark);
+  color: var(--light);
 }
 
 /* ============check box========== */
@@ -1116,38 +1045,6 @@ textarea::placeholder {
 }
 
 
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .quotes-section {
-    padding: 30px 0;
-  }
-
-  .quotes-list {
-    padding-left: 0;
-  }
-
-  .quote-card .row>div {
-    margin-bottom: 0;
-  }
-
-  .quote-card .price {
-    text-align: left;
-  }
-
-  .filter-card {
-    position: static;
-    margin-bottom: 2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .quote-card .col-md-3.border-start {
-    border-left: none !important;
-    border-top: 1px solid #dee2e6;
-  }
-}
-
 /* Animation Classes */
 [data-aos] {
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -1185,7 +1082,7 @@ textarea::placeholder {
 
 /* ============================================== */
 /* =============navbar-toggler-icon============== */
-/* During collapsing / expanding animation */
+
 .navbar-collapse.collapsing,
 .navbar-collapse.show {
   background: var(--primary-dark);
@@ -1202,4 +1099,23 @@ textarea::placeholder {
 .navbar-collapse.collapsing .nav-link:hover,
 .navbar-collapse.show .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.toast-warning {
+  background-color: var(--primary-dark) !important;
+  color: var(--light) !important;
+  margin-top: 4rem !important;
+
+}
+
+.toast-success {
+  background-color: var(--success) !important;
+  color: var(--light) !important;
+  margin-top: 4rem !important;
+
+}
+
+.toast-warning .toast-progress,
+.toast-success .toast-progress {
+  background-color: var(--light) !important;
 }
