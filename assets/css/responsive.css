@@ -1,0 +1,293 @@
+@media (max-width: 1200px) {
+
+    .tc-quote-box {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .quote-row {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.5rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .chos-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto !important;
+        margin-top: 20px !important;
+    }
+
+    .why-choose {
+
+        justify-content: center !important;
+    }
+
+    .benefit-card {
+        padding: 2rem 1.5rem;
+    }
+
+    @keyframes scrollTestimonials {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-340px * 4 - 2rem * 4));
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .chos-cont h3 {
+        font-size: 28px !important;
+    }
+
+    .hero-section {
+        min-height: 80vh;
+        padding: 80px 0 30px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .tc-quote-box {
+        padding: 1rem;
+    }
+
+    .quote-row {
+        grid-template-columns: 1fr !important;
+        gap: 0.5rem;
+    }
+
+    .quote-row input,
+    .quote-row select {
+        height: 45px;
+        font-size: 13px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .quote-box-container {
+        margin-top: -50px;
+    }
+}
+
+
+/* Medium devices (992px and below) */
+@media (max-width: 992px) {
+    .testimonials .section-heading {
+        font-size: 2.2rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .testimonial-item {
+        padding: 2rem 1.5rem;
+    }
+
+    .contact-sec .contt-im {
+        display: none;
+    }
+
+    .section-heading,
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .benefit-card {
+        padding: 1.5rem 1rem;
+    }
+
+
+
+    @keyframes scrollTestimonials {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-300px * 4 - 1.5rem * 4));
+        }
+    }
+
+    li.nav-item {
+        text-align: center;
+    }
+
+
+}
+
+/* Small devices (770px and below) */
+@media (max-width: 770px) {
+    .testimonials {
+        padding: 3rem 0;
+    }
+
+    .testimonials .section-heading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .testimonial-item {
+        padding: 2rem 1.5rem;
+    }
+
+    .testimonial-content p {
+        font-size: 0.9rem;
+    }
+
+    .benefits-section,
+    .testimonials {
+        padding: 3rem 0;
+    }
+
+    .section-heading,
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .benefit-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .benefit-img {
+        max-width: 100px;
+        height: 100px;
+    }
+
+
+
+
+
+    @keyframes scrollTestimonials {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-280px * 4 - 1rem * 4));
+        }
+    }
+}
+
+/* Extra small devices (576px and below) */
+@media (max-width: 576px) {
+    .testimonials .section-heading {
+        font-size: 1.75rem;
+    }
+
+    .testimonial-item {
+        padding: 1.5rem 1rem;
+    }
+
+    .testimonial-content p {
+        font-size: 0.85rem;
+    }
+
+    .testimonial-footer h4 {
+        font-size: 1rem;
+    }
+
+    .testimonial-footer span {
+        font-size: 0.8rem;
+    }
+
+    .section-heading,
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .benefit-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .benefit-card h4 {
+        font-size: 1.2rem;
+    }
+
+    .benefit-card p {
+        font-size: 0.9rem;
+    }
+
+
+
+    @keyframes scrollTestimonials {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-260px * 4 - 1rem * 4));
+        }
+    }
+}
+
+/* Ultra small devices (375px and below) */
+@media (max-width: 375px) {
+    .testimonials .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .testimonial-item {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .section-heading,
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .benefit-card {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .benefit-img {
+        max-width: 80px;
+        height: 80px;
+    }
+
+
+    @keyframes scrollTestimonials {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-240px * 4 - 0.75rem * 4));
+        }
+    }
+}
