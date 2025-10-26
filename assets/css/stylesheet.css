@@ -4,16 +4,16 @@
 
 /* ====== Base ====== */
 :root {
-  --primary: #009FDB;
-  --primary-dark: #0078A5;
-  --secondary: #FF6B35;
+  --primary: #47030678;
+  --primary-dark: #480404;
+  --secondary: #480404;
   --dark: #0D1B2A;
   --light: #f8f9fa;
   --text-dark: #333;
   --text-light: #666;
-  --white: #ffffff;
-  --gradient: linear-gradient(135deg, #009FDB 0%, #0056b3 100%);
-  --gradient-secondary: linear-gradient(135deg, #FF6B35 0%, #E94E1B 100%);
+  --white: #fff;
+  --gradient: linear-gradient(135deg, #47030678 0%, #480404 100%);
+  --gradient-secondary: linear-gradient(135deg, #47030678 0%, #480404 100%);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
   --border-radius: 16px;
@@ -46,36 +46,159 @@ h5 {
 
 }
 
+.heading {
+  color: var(--primary-dark);
+}
+
+.navbar-nav {
+  align-items: center !important;
+}
 
 .navbar-dark .navbar-nav>.nav-item>.nav-link {
   color: #fff !important;
-  font-size: 16px;
-  /* gap: 6px; */
-  padding-right: 1rem;
+  font-size: 1.2rem;
+  width: 142px;
+  text-align: center;
+  margin-right: 10px;
 }
 
 .navbar-dark .navbar-nav>.nav-item>.nav-link:hover {
-  /* background-color: rgba(143, 139, 139, 0.55); */
-  background: #009FDB !important;
-
-
+  background: var(--light);
+  border-radius: 10px;
+  color: var(--dark) !important;
 }
 
 
+
 .navbar.scrolled {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-  transition: background-color 200ms linear;
+  background: var(--primary-dark);
+}
+
+/* =======================================================
+   EASYTAXI BOOKING FORM - BOOTSTRAP STYLE
+======================================================= */
 
 
+.easytaxi-booking-form .form-control,
+.easytaxi-booking-form .form-select {
+  height: 50px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px !important;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1rem;
+}
+
+.easytaxi-booking-form .form-control:focus,
+.easytaxi-booking-form .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(0, 159, 219, 0.25);
+  background: #ffffff;
+}
+
+.easytaxi-booking-form .btn-custom {
+  height: 50px;
+
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.stop-wrapper {
+  position: relative;
+}
+
+.add-multiple-stops {
+  position: absolute;
+  bottom: -26px;
+  left: 8px;
+  font-size: 0.75rem;
+  color: var(--primary-dark);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3px 9px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  z-index: 10;
+
+}
+
+.btn-danger {
+  background: var(--primary-dark) !important;
+  border: none !important;
+  border-color: none !important;
+}
+
+
+/* Remove old grid styles */
+.quote-row {
+  /* Remove grid properties */
+}
+
+.quote-row.oneway,
+.quote-row.return,
+.quote-row.hourly {
+  /* Remove grid template columns */
+}
+
+/* Remove old input styles */
+.quote-row input,
+.quote-row select {
+  /* Remove old styles - now using Bootstrap */
+}
+
+/* Responsive Design for Booking Form */
+@media (max-width: 1200px) {
+  .easytaxi-booking-form {
+    padding: 20px;
+    margin: 0 15px;
+  }
+
+  .easytaxi-booking-form .row>div {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .easytaxi-booking-form {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .easytaxi-booking-form .form-control,
+  .easytaxi-booking-form .form-select,
+  .easytaxi-booking-form .btn-custom {
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .add-multiple-stops {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 5px;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 576px) {
+  .easytaxi-booking-form {
+    padding: 10px;
+  }
+
+  .easytaxi-booking-form .row>div {
+    margin-bottom: 8px;
+  }
 }
 
 
 /* =======================================================
    HERO SECTION
 ======================================================= */
-.hero-section {
-  background: linear-gradient(rgba(13, 27, 42, 0.3), rgba(13 27 42 / 0%)),
-    url('../images/banner-3.jpg') no-repeat center center / cover;
+.pricing-hero {
+  /* background: linear-gradient(rgba(13, 27, 42, 0.3), rgba(13 27 42 / 0%)),
+    url('../images/banner.jpeg') no-repeat center center / cover; */
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   min-height: 100vh;
   color: #ffffff;
   display: flex;
@@ -115,16 +238,16 @@ h5 {
 /* =======================================================
    BOOKING FORM - TAXICODE STYLE
 ======================================================= */
-.tc-quote-box {
-  background: rgba(216, 216, 216, 0.74);
+.easytaxi-booking-form {
+  background: var(--primary);
+  backdrop-filter: blur(2px);
+  padding: 20px;
 
-  padding: 15px 20px 0px 20px;
-
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   margin: 0 auto;
   width: 1000px;
   max-width: 95%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+
 }
 
 .quote-row {
@@ -135,30 +258,17 @@ h5 {
   transition: grid-template-columns 0.4s ease;
 }
 
-/* One Way Journey - 7 columns */
-.quote-row.oneway {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
 
-/* Return Journey - 8 columns */
-.quote-row.return {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr auto;
-}
-
-/* Hourly Journey - 6 columns */
-.quote-row.hourly {
-  grid-template-columns: 120px 1fr 1fr 140px 140px auto;
-}
 
 .quote-row input,
 .quote-row select {
-  height: 40px;
+
   font-size: 12px;
   padding: 0.75rem 1rem;
   width: 100%;
   transition: all 0.3s ease;
-  border: 0 !important;
-  border-radius: 0 !important;
+
+
 }
 
 .quote-row input:focus,
@@ -169,41 +279,27 @@ h5 {
   background: #ffffff;
 }
 
-.via-wrapper {
+.stop-wrapper {
   position: relative;
 }
 
-.add-multiple-vias {
-  position: absolute;
-  bottom: -23px;
-  left: 0;
-  font-size: 0.6rem;
-  color: #ffffff;
+
+
+.add-multiple-stops:hover {
+  color: var(--light);
   text-decoration: none;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 2px 8px;
-  border-radius: 0 !important;
-  transition: all 0.3s ease;
-  z-index: 10;
+  background: var(--primary-dark)
 }
 
-.add-multiple-vias:hover {
-  color: #007bff;
-  text-decoration: none;
-  background: rgba(0, 0, 0, 0.9);
-}
 
-.date-time-wrapper {
-  display: contents;
-}
 
 .form-select {
   border: 0 !important;
   border-radius: 0 !important;
 }
 
-.btn-primary {
-  background: #009FDB;
+.btn-custom {
+  background: var(--primary-dark) !important;
   color: white;
   height: 40px;
   display: inline-block;
@@ -212,17 +308,23 @@ h5 {
   cursor: pointer;
   border: none;
   font-size: 14px;
-
-  border-bottom: 2px solid #0078A5;
+  border-bottom: 2px solid var(--light);
   transition: background 0.2s linear;
-  outline: none;
-  box-shadow: none;
+  outline: none !important;
+  box-shadow: none !important;
   border-radius: 0px;
 
 }
 
-.btn-primary:hover {
-  background-color: #008FD2 !important;
+.btn-custom:hover {
+  background-color: var(--light) !important;
+  color: var(--dark) !important;
+  border-color: var(--primary-dark);
+}
+
+.form-control:focus {
+  border-color: var(--primary) !important;
+  box-shadow: var(--primary) !important;
 }
 
 .phone-btn {
@@ -290,8 +392,8 @@ h5 {
 .step-icon {
   width: 60px;
   height: 60px;
-  background: #000;
-  color: #fff;
+  background: var(--primary-dark);
+  color: var(--light);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -309,7 +411,7 @@ h5 {
 
 
 .chos-cont {
-  background-color: #161616;
+  background: var(--primary-dark);
   margin-left: -240px;
   padding: 45px 35px;
 }
@@ -503,7 +605,8 @@ h5 {
   left: 0;
   width: 100%;
   height: 0;
-  background: var(--gradient);
+  background: var(--primary-dark);
+  color: var(--light);
   transition: var(--transition);
   z-index: -1;
 }
@@ -545,7 +648,7 @@ h5 {
 .benefit-card h4 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: var(--dark);
+  color: var(--primary-dark);
   transition: var(--transition);
 }
 
@@ -612,18 +715,13 @@ h5 {
 
 .testimonial-content p {
   font-size: 1rem;
-
+  color: var(--dark);
   font-style: italic;
   margin: 1.5rem 0;
 
 }
 
-.testimonial-footer h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #007bff;
-  margin-bottom: 0.5rem;
-}
+
 
 
 
@@ -653,8 +751,6 @@ h5 {
 
 .testimonials .section-heading {
   font-size: 2.5rem;
-  font-weight: 800;
-  color: #0D1B2A;
   position: relative;
   display: inline-block;
   margin-bottom: 3rem;
@@ -763,7 +859,7 @@ h5 {
 }
 
 .filter-header {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  background: var(--primary-dark) !important;
 }
 
 .filter-body {
@@ -937,6 +1033,89 @@ h5 {
   /* optional - matches your rounded corners */
 }
 
+.contact-all {
+  background: var(--primary-dark);
+  padding: 2rem;
+  border-radius: 10px;
+  color: var(--light);
+}
+
+input.form-control.mb-3 {
+  background: transparent;
+  color: white;
+}
+
+input.form-control.mb-3::placeholder {
+  color: var(--light);
+}
+
+.footer-section {
+  background: var(--primary-dark);
+  color: var(--light);
+}
+
+.list-unstyled li a {
+  color: var(--light) !important;
+  text-decoration: none;
+}
+
+.list-unstyled li a:hover {
+  background: var(--light);
+  color: var(--dark) !important;
+  border-radius: 2px;
+  padding: 2px 5px;
+
+}
+
+/* ============check box========== */
+.form-check-input {
+
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary-dark);
+  /* red border */
+
+  background-color: var(--light);
+  /* white background */
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-dark);
+  /* red background */
+  border-color: var(--primary-dark);
+}
+
+.form-check-input:checked::after {
+  content: "";
+  color: var(--light);
+  font-size: 14px;
+  position: absolute;
+  top: 1px;
+  left: 3px;
+}
+
+.form-check-input:hover {
+  box-shadow: 0 0 4px rgba(72, 4, 4, 0.5);
+}
+
+.text-primary {
+  color: var(--primary-dark) !important;
+}
+
+textarea {
+  background: transparent !important;
+  color: var(--light) !important;
+}
+
+textarea::placeholder {
+  color: var(--light) !important;
+}
+
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -1009,8 +1188,8 @@ h5 {
 /* During collapsing / expanding animation */
 .navbar-collapse.collapsing,
 .navbar-collapse.show {
-
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: var(--primary-dark);
+  align-items: center;
 }
 
 /* Make nav links readable */

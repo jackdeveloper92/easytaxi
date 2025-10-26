@@ -25,7 +25,7 @@
                     <a class="nav-link" href="tracking.php">Track Booking</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="quotes.php">Get Quotes</a>
+                    <a class="nav-link" href="fare-quotes.php">Fare Quotes</a>
                 </li>
             </ul>
         </div>

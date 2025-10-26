@@ -1,9 +1,6 @@
 @media (max-width: 1200px) {
 
-    .tc-quote-box {
-        width: 95%;
-        padding: 1.5rem;
-    }
+
 
     .quote-row {
         grid-template-columns: 1fr 1fr !important;
@@ -61,14 +58,9 @@
         font-size: 2rem;
     }
 
-    .tc-quote-box {
-        padding: 1rem;
-    }
 
-    .quote-row {
-        grid-template-columns: 1fr !important;
-        gap: 0.5rem;
-    }
+
+
 
     .quote-row input,
     .quote-row select {

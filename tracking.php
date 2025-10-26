@@ -36,7 +36,7 @@
                                         <input type="tel" class="form-control" id="phoneNumber" placeholder="Your registered number" required>
                                     </div>
                                     <div class="col-12">
-                                        <button type="submit" class="btn btn-primary">Track Booking</button>
+                                        <button type="submit" class="btn btn-custom">Track Booking</button>
                                     </div>
                                 </div>
                             </form>
