@@ -50,7 +50,7 @@
             <label class="form-label fw-semibold">Password</label>
             <input type="password" class="form-control" placeholder="Enter password" required>
           </div>
-          <button type="submit" class="btn btn-primary w-100">Login</button>
+          <button type="submit" class="btn btn-custom w-100">Login</button>
         </form>
       </div>
       <div class="modal-footer border-0 text-center">
@@ -95,7 +95,7 @@
             <small id="passwordError" class="text-danger mt-1 d-none">Passwords do not match</small>
           </div>
 
-          <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+          <button type="submit" class="btn btn-custom w-100">Sign Up</button>
         </form>
       </div>
       <div class="modal-footer border-0 text-center">
